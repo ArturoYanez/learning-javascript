@@ -5,7 +5,6 @@ Este repositorio fue creado con la intención de preservar todo el conocimiento 
 
 ## Áreas del repositorio
 
-___
 ### documentation
 Este archivo contiene todo lo referente a documentos con información teoríca respecto a los diversos temás divididos en sub-carpetas para una facíl consulta.
 
