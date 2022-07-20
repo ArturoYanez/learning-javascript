@@ -143,5 +143,20 @@ Esto nos arrojaria como resultado el siguiente mensaje de error derivado de la e
 ![Uncaught ReferenceError: ahsjdakhdj is not defined
     at script.js:2:5](https://i.postimg.cc/Vv8sRj61/screenshot-exception.png "JavaScript Exception Message")
 
+### Tipos de excepciones.
+Existen dos tipos de excepciones fundamentales: Aquellos que hacen referencia a un error en cuanto a las especificaciones de ECMAScript. Y aquellos errores que hacen referencia a algun objeto del DOM. Dependiendo de estos hay una inmensa cantidad de tipo de excepciones, aquellos listados en la web de Mozilla Developer Network seran adjuntados a continuación:
 
+1. ECMAScript Exception Reference.
+    * [Error](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Error "Error")
+    * [EvalError](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/EvalError "EvalError")
+    * [InternalError](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/InternalError "InternalError")
+    * [RangeError](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/RangeError "RangeError")
+    * [ReferenceError](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError "ReferenceError")
+    * [SyntaxError](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError "SyntaxError")
+    * [TypeError](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Error "TypeError - MDN Not Found")
+    * [URIError](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/URIError "URIError")
+2. DOM Exception Reference.
+    * [DOMException](https://developer.mozilla.org/en-US/docs/Web/API/DOMException)
+3. DOM Error Reference
+    * [DOMError](https://developer.mozilla.org/en-US/docs/Web/API/DOMError)
 
