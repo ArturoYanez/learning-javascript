@@ -14,6 +14,15 @@ De modo que tenemos un control del flujo de nuestro Script, permitiendonos deter
         * Default.
 
 2. Sentencias de manejo de excepciones.
+    * Tipos de Excepciones
+
+3. Try... Catch
+    * Sintaxis
+    * Objeto error
+    * Catch Incondicional
+    * Catch Condicional
+    * Finally
+    * Sentencia Throw
 
 
 ___
@@ -160,3 +169,73 @@ Existen dos tipos de excepciones fundamentales: Aquellos que hacen referencia a 
 3. DOM Error Reference
     * [DOMError](https://developer.mozilla.org/en-US/docs/Web/API/DOMError)
 
+## Try... Catch
+La sentencia Try... Catch se trata de una herramienta que le permite al desarrollador poder manejar de forma dinamica los errores que puedan llegar a sucitarse en determinado punto del código. El mismo se compone de una estructura simple.
+```javascript
+try {
+
+}
+catch(error){
+    console.log(error);
+}
+```
+Dentro del bloqué try es el lugar donde puede llegar a ocurrir el error que buscamos manejar. En caso de que el error ocurra, contrario a ejecutarse el *event handler* que da como resultado un mensaje de error en consola; el error es enviado como parámetro al catch permitiendonos decidir que hacer con ese error recibido, por ejemplo, mostrando un mensaje de error personalizado y mcuho mas intuitivo.
+
+Ademas se debe tener en cuenta que los errores que podemos manejar usando el try... catch son errores de referencia como los citados anteriormente. No obstante los errores de sintaxis por ejemplo no vienen contemplados dentro de estos, por lo que los mismos si nos mostraran un mensaje de error predeterminado en la consola.
+
+### Catch incondicional
+Se trata de un mero concepto. Los catch pueden contener bloques de código tan complejos como nuestros programas en si mismos. Por lo que las estructuras condicionales forman parte de ellos. Un **Catch Incondicional** se trata de un Catch que una vez recibido el error dentro de el código a ejecutar no hace uso de ninguna condición que lo invite a hace runa u otra cosa dependiendo de los datos que reciba o posea.
+
+### Catch Condicional
+Mientras que por otro lado el **Catch condicional** es su directo opuesto. Se trata de un Catch que a la hora de manejar y(o tratar al error hace uso de estructuras condicionales para operar los datos y mostrar diversos resultados en torno a esto.
+
+## Finally
+Se trata de una sentencia adicional que va colocada luego del catch que lo que hace es ejecutar código sin importar si existe o no un error dentro del código.
+
+```javascript
+try {
+    asdad;
+}
+catch(error){
+    console.log(error);
+}
+finally{
+    console.log("Fin del programa.");
+}
+```
+
+En este ejemplo sin importar si se recibio y manejó o no un error el mensaje `Fin del programa` se mostrará de igual manera.
+
+Entre las carácteristicas de Finally además se encuentra la capacidad de sobreescribir el valor retornado de una función. Miremos otro ejemplo:
+
+```javascript
+const testTry ()=>{
+    try {
+        return 1
+    } catch(e){
+        return 2
+    } finally {
+        return 3;
+    }
+}
+```
+
+La norma general nos dice que una vez se haya ejecutado el primer return el resto del código no debería ejecutarse. Pero ocurre que el finally puede ir incluso mas alla de eso, ejecutandose de todas formas y hasta sobreescribiendo valor retornado. De manera que al hacer un `console.log(testTry);` nos mostrará el número `3`.
+
+## Throw
+La sentencía throw lo que nos permite es poder lanzar nuestras propias excepciones a través de JavaScript. Estas pueden contener un valor, númerico, booleano, un string, un array, o incluso un objeto.
+
+Si Throw se encuentra dentro del try este sera tomado como una excepción producto de un "error" ocurrido y sera enviado al catch como parametro, el cual podrá manejarlo de cualquier forma.
+
+### Ejemplo
+```javascript
+try {
+    throw {
+        error: "Nombre del Error",
+        info: "Información del error"
+    } catch (e) {
+        console.log(e);
+    }
+}
+```
+Este bloqué de código dara como resultado que se muestre en consola un objeto con dos propiedaes. Error e info que contienen la informaciónq ue se les fue conferida.
