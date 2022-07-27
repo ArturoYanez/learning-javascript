@@ -239,3 +239,6 @@ try {
 }
 ```
 Este bloqué de código dara como resultado que se muestre en consola un objeto con dos propiedaes. Error e info que contienen la informaciónq ue se les fue conferida.
+
+## ¿Cuando es recomendable usar Try... Catch?
+El uso de Try & Catch en JavaScript si bien es bastante util debería evitarse usar lo menos posible. No obstante si te encuentras desarrollando, y notas que hay un bloqué de código donde si bien todo parece bien a simple vista, pero existe una pequeña posibildiad de que se de lugar a una excepción. Entonces utilizamos try... catch de modo que podamos manejar a nuestro antojo la excepción recibida y así poder operar en base a ella.  
